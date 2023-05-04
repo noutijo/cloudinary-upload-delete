@@ -1,4 +1,3 @@
-//require dotenv here
 import dotenv from "dotenv"
 dotenv.config()
 
@@ -27,14 +26,13 @@ app.get("", (req, res) => {
   res.render("home")
 })
 
-//we used upload.single to tell "multer" to upload
-// only single image
+// We are using upload.single to tell "multer" to upload only single image
 app.post("/upload", upload.single("image"), (req, res) => {
   console.log(req.file)
   res.send("Done")
 })
 
-// just playing for testing, that's no get method we should use here
+// Just playing for testing, that's no get method we should use here
 app.get("/image/:id", upload.single("image"), async (req, res) => {
   const { id } = req.params
   const deleteProduct = await cloudinary.uploader.destroy(`profile/${id}`)
