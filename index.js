@@ -29,7 +29,7 @@ app.get("", (req, res) => {
 // We are using upload.single to tell "multer" to upload only single image
 app.post("/upload", upload.single("image"), (req, res) => {
   console.log(req.file)
-  res.send("Done")
+  res.send("Uploaded bro!")
 })
 
 // Just playing for testing, that's not GET method we should use here
