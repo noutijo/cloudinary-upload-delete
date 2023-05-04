@@ -1,5 +1,5 @@
 {
-  "name": "cloudinary-demo",
+  "name": "cloudinary-single-upload-delete",
   "version": "1.0.0",
   "description": "Guide to uploading single image using Node.js and Express.js to the cloud-based services Cloudinary",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "go": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Evans",
+  "author": "Oreol Noumodong",
   "license": "ISC",
   "dependencies": {
     "cloudinary": "^1.36.4",
