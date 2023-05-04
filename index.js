@@ -32,12 +32,12 @@ app.post("/upload", upload.single("image"), (req, res) => {
   res.send("Done")
 })
 
-// Just playing for testing, that's no get method we should use here
+// Just playing for testing, that's not GET method we should use here
 app.get("/image/:id", upload.single("image"), async (req, res) => {
   const { id } = req.params
-  const deleteProduct = await cloudinary.uploader.destroy(`profile/${id}`)
+  const deletedImage = await cloudinary.uploader.destroy(`profile/${id}`)
 
-  console.log("destroyed message :", deleteProduct)
+  console.log("message :", deletedImage)
   res.send("Deleted bro!")
 })
 
