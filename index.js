@@ -33,7 +33,7 @@ app.post("/upload", upload.single("image"), (req, res) => {
 })
 
 // Just playing for testing, that's not GET method we should use here
-app.get("/image/:id", upload.single("image"), async (req, res) => {
+app.get("/image/:id", async (req, res) => {
   const { id } = req.params
   const deletedImage = await cloudinary.uploader.destroy(`profile/${id}`)
 
